@@ -57,17 +57,21 @@ export default () => {
   return (
     <Container>
       <Header>
-        <Title>Apollo 2020</Title>
-        <Subtitle>I love GraphQL  -_-</Subtitle>
+        <Title>Apollo***** 2020</Title>
+        <Subtitle>I love GraphQL -_-</Subtitle>
       </Header>
       {loading && <Loading>Loading...</Loading>}
-      
-        <Movies>
-          {data?.movies?.map(m => (
-            <Movie key={m.id} id={m.id} isLiked={m.isLiked} bg={m.medium_cover_image} />
-          ))}
-        </Movies>
-  
+
+      <Movies>
+        {data?.movies?.map(m => (
+          <Movie
+            key={m.id}
+            id={m.id}
+            isLiked={m.isLiked}
+            bg={m.medium_cover_image}
+          />
+        ))}
+      </Movies>
     </Container>
   );
 };
